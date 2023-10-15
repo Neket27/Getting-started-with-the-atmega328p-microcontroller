@@ -1,0 +1,7 @@
+# ninja log v5
+1	97	7189369523599527	CMakeFiles/BSP.dir/C_/Program_Files_(x86)/Sysprogs/VisualGDB/CMake/embedded/dummy.c.obj	bd3715f5fafc469b
+1	319	7190745325523748	CMakeFiles/pr.dir/LEDBlink.cpp.obj	cf2b268286ad9106
+102	204	7190781047174779	pr	b0a9e51b93f1b798
+0	101	7190781046220541	CMakeFiles/pr.dir/Main.cpp.obj	e639e6fa4bbf2acd
+207	237	7190781047574991	pr.bin	3bef81ee27e500ee
+205	239	0	CMakeFiles/pr.hex	7f61ec10b165db49
