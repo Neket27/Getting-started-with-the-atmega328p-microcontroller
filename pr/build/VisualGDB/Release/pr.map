@@ -1,7 +1,17 @@
 Archive member included to satisfy reference by file (symbol)
 
+c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
+                              CMakeFiles/pr.dir/Main.cpp.obj (__divmodhi4)
 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
                               c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o (exit)
+c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+                              CMakeFiles/pr.dir/Main.cpp.obj (__do_copy_data)
+c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+                              CMakeFiles/pr.dir/Main.cpp.obj (__do_clear_bss)
+c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_umulhisi3.o)
+                              CMakeFiles/pr.dir/Main.cpp.obj (__umulhisi3)
+c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_udivmodhi4.o)
+                              c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o) (__udivmodhi4)
 
 Discarded input sections
 
@@ -38,10 +48,26 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/pr.dir/Main.cpp.obj
  .data          0x0000000000000000        0x0 CMakeFiles/pr.dir/Main.cpp.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/pr.dir/Main.cpp.obj
- .text._Z8port_iniv
+ .text._Z10initKeypadv
+                0x0000000000000000        0xa CMakeFiles/pr.dir/Main.cpp.obj
+ .text._Z9initTimerv
                 0x0000000000000000        0xe CMakeFiles/pr.dir/Main.cpp.obj
- .text._Z7impulsev
-                0x0000000000000000       0x18 CMakeFiles/pr.dir/Main.cpp.obj
+ .data.keypadCounter
+                0x0000000000000000        0x1 CMakeFiles/pr.dir/Main.cpp.obj
+ .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
+ .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
+ .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
  .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
  .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
  .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
@@ -58,6 +84,66 @@ Discarded input sections
                 0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.fixed
                 0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
+ .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+ .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+ .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+ .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_umulhisi3.o)
+ .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_umulhisi3.o)
+ .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_umulhisi3.o)
+ .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_udivmodhi4.o)
 
 Memory Configuration
 
@@ -185,7 +271,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000       0xac
+.text           0x0000000000000000      0x3c6
  *(.vectors)
  .vectors       0x0000000000000000       0x68 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
                 0x0000000000000000                __vector_default
@@ -226,6 +312,10 @@ END GROUP
  *(.init3)
  *(.init3)
  *(.init4)
+ .init4         0x0000000000000074       0x16 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+                0x0000000000000074                __do_copy_data
+ .init4         0x000000000000008a       0x10 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+                0x000000000000008a                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -236,46 +326,61 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000000000000074        0x8 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
+ .init9         0x000000000000009a        0x8 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
  *(.init9)
  *(.text)
- .text          0x000000000000007c        0x4 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
-                0x000000000000007c                __vector_22
-                0x000000000000007c                __vector_1
-                0x000000000000007c                __vector_24
-                0x000000000000007c                __vector_12
-                0x000000000000007c                __bad_interrupt
-                0x000000000000007c                __vector_6
-                0x000000000000007c                __vector_3
-                0x000000000000007c                __vector_23
-                0x000000000000007c                __vector_25
-                0x000000000000007c                __vector_11
-                0x000000000000007c                __vector_13
-                0x000000000000007c                __vector_17
-                0x000000000000007c                __vector_19
-                0x000000000000007c                __vector_7
-                0x000000000000007c                __vector_5
-                0x000000000000007c                __vector_4
-                0x000000000000007c                __vector_9
-                0x000000000000007c                __vector_2
-                0x000000000000007c                __vector_21
-                0x000000000000007c                __vector_15
-                0x000000000000007c                __vector_8
-                0x000000000000007c                __vector_14
-                0x000000000000007c                __vector_10
-                0x000000000000007c                __vector_16
-                0x000000000000007c                __vector_18
-                0x000000000000007c                __vector_20
-                0x0000000000000080                . = ALIGN (0x2)
+ .text          0x00000000000000a2        0x4 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
+                0x00000000000000a2                __vector_22
+                0x00000000000000a2                __vector_1
+                0x00000000000000a2                __vector_24
+                0x00000000000000a2                __vector_12
+                0x00000000000000a2                __bad_interrupt
+                0x00000000000000a2                __vector_6
+                0x00000000000000a2                __vector_3
+                0x00000000000000a2                __vector_23
+                0x00000000000000a2                __vector_25
+                0x00000000000000a2                __vector_11
+                0x00000000000000a2                __vector_13
+                0x00000000000000a2                __vector_17
+                0x00000000000000a2                __vector_19
+                0x00000000000000a2                __vector_7
+                0x00000000000000a2                __vector_5
+                0x00000000000000a2                __vector_4
+                0x00000000000000a2                __vector_9
+                0x00000000000000a2                __vector_2
+                0x00000000000000a2                __vector_21
+                0x00000000000000a2                __vector_15
+                0x00000000000000a2                __vector_8
+                0x00000000000000a2                __vector_14
+                0x00000000000000a2                __vector_10
+                0x00000000000000a2                __vector_18
+                0x00000000000000a2                __vector_20
+                0x00000000000000a6                . = ALIGN (0x2)
  *(.text.*)
+ .text._Z10readKeypadv
+                0x00000000000000a6       0xac CMakeFiles/pr.dir/Main.cpp.obj
+                0x00000000000000a6                _Z10readKeypadv
+ .text.__vector_16
+                0x0000000000000152      0x1a0 CMakeFiles/pr.dir/Main.cpp.obj
+                0x0000000000000152                __vector_16
  .text.startup.main
-                0x0000000000000080       0x28 CMakeFiles/pr.dir/Main.cpp.obj
-                0x0000000000000080                main
-                0x00000000000000a8                . = ALIGN (0x2)
+                0x00000000000002f2       0x62 CMakeFiles/pr.dir/Main.cpp.obj
+                0x00000000000002f2                main
+ .text.libgcc.div
+                0x0000000000000354       0x28 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
+                0x0000000000000354                _div
+                0x0000000000000354                __divmodhi4
+ .text.libgcc.mul
+                0x000000000000037c       0x1e c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_umulhisi3.o)
+                0x000000000000037c                __umulhisi3
+ .text.libgcc.div
+                0x000000000000039a       0x28 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_udivmodhi4.o)
+                0x000000000000039a                __udivmodhi4
+                0x00000000000003c2                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000000000000a8        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
-                0x00000000000000a8                _exit
-                0x00000000000000a8                exit
+ .fini9         0x00000000000003c2        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
+                0x00000000000003c2                _exit
+                0x00000000000003c2                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -294,36 +399,44 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000000000000a8        0x4 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000000000003c2        0x4 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000000000000ac                _etext = .
+                0x00000000000003c6                _etext = .
 
-.data           0x0000000000800100        0x0 load address 0x00000000000000ac
-                [!provide]                        PROVIDE (__data_start, .)
+.data           0x0000000000800100        0xc load address 0x00000000000003c6
+                0x0000000000800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
+ .data.display  0x0000000000800100        0x2 CMakeFiles/pr.dir/Main.cpp.obj
+                0x0000000000800100                display
+ .data.SEGMENTE
+                0x0000000000800102        0xa CMakeFiles/pr.dir/Main.cpp.obj
+                0x0000000000800102                SEGMENTE
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.r*)
-                0x0000000000800100                . = ALIGN (0x2)
-                0x0000000000800100                _edata = .
-                [!provide]                        PROVIDE (__data_end, .)
+                0x000000000080010c                . = ALIGN (0x2)
+                0x000000000080010c                _edata = .
+                0x000000000080010c                PROVIDE (__data_end, .)
 
-.bss            0x0000000000800100        0x0
-                [!provide]                        PROVIDE (__bss_start, .)
+.bss            0x000000000080010c        0x1
+                0x000000000080010c                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
+ .bss.segCounter
+                0x000000000080010c        0x1 CMakeFiles/pr.dir/Main.cpp.obj
+                0x000000000080010c                segCounter
  *(COMMON)
-                [!provide]                        PROVIDE (__bss_end, .)
-                0x00000000000000ac                __data_load_start = LOADADDR (.data)
-                0x00000000000000ac                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000000000080010d                PROVIDE (__bss_end, .)
+                0x00000000000003c6                __data_load_start = LOADADDR (.data)
+                0x00000000000003d2                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0000000000800100        0x0
+.noinit         0x000000000080010d        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                        PROVIDE (__noinit_end, .)
-                0x0000000000800100                _end = .
+                0x000000000080010d                _end = .
                 [!provide]                        PROVIDE (__heap_start, .)
 
 .eeprom         0x0000000000810000        0x0
@@ -388,42 +501,42 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000       0x30
+.debug_aranges  0x0000000000000000       0x40
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000       0x30 CMakeFiles/pr.dir/Main.cpp.obj
+                0x0000000000000000       0x40 CMakeFiles/pr.dir/Main.cpp.obj
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000      0x797
+.debug_info     0x0000000000000000      0x832
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x5f4 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_info    0x00000000000005f4      0x1a3 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_info    0x00000000000005f4      0x23e CMakeFiles/pr.dir/Main.cpp.obj
 
-.debug_abbrev   0x0000000000000000      0x6a8
+.debug_abbrev   0x0000000000000000      0x710
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x5a2 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_abbrev  0x00000000000005a2      0x106 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_abbrev  0x00000000000005a2      0x16e CMakeFiles/pr.dir/Main.cpp.obj
 
-.debug_line     0x0000000000000000      0x221
+.debug_line     0x0000000000000000      0x367
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000       0x1a c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_line    0x000000000000001a      0x207 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_line    0x000000000000001a      0x34d CMakeFiles/pr.dir/Main.cpp.obj
 
-.debug_frame    0x0000000000000000       0x44
+.debug_frame    0x0000000000000000       0xac
  *(.debug_frame)
- .debug_frame   0x0000000000000000       0x44 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_frame   0x0000000000000000       0xac CMakeFiles/pr.dir/Main.cpp.obj
 
-.debug_str      0x0000000000000000     0x77e8
+.debug_str      0x0000000000000000     0x7842
  *(.debug_str)
  .debug_str     0x0000000000000000      0x208 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_str     0x0000000000000208     0x75e0 CMakeFiles/pr.dir/Main.cpp.obj
-                                       0x768b (size before relaxing)
+ .debug_str     0x0000000000000208     0x763a CMakeFiles/pr.dir/Main.cpp.obj
+                                       0x76ea (size before relaxing)
 
-.debug_loc      0x0000000000000000       0x90
+.debug_loc      0x0000000000000000      0x1f6
  *(.debug_loc)
- .debug_loc     0x0000000000000000       0x90 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_loc     0x0000000000000000      0x1f6 CMakeFiles/pr.dir/Main.cpp.obj
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -443,9 +556,9 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000       0x20
+.debug_ranges   0x0000000000000000       0x30
  *(.debug_ranges)
- .debug_ranges  0x0000000000000000       0x20 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_ranges  0x0000000000000000       0x30 CMakeFiles/pr.dir/Main.cpp.obj
 
 .debug_macro    0x0000000000000000     0x2ac5
  *(.debug_macro)
