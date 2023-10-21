@@ -1,10 +1,10 @@
 #define F_CPU 8000000L
-// Подключение семисегментных индикаторов к AVR. Динамическая индикация
+// Подключение семисегментных индикаторов к AVR. Динамическая индикация. Опрос матричной клавиатуры.  Использование таймера.
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
-
+unsigned char key;
 
 // Функция для инициализации порта DDRC
 void initKeypad() {
@@ -14,10 +14,10 @@ void initKeypad() {
 
 // Функция для опроса клавиатуры
 char readKeypad() {
-	PORTC |= 0b1111111; // Сбросим нижние 4 биты
+	PORTC |= 0b1111111; // Установим нижние 3 бита в высокий уровень и верхние 4 в режим чтения
 	char col, row;
 	for (col = 0; col < 3; col++) {
-		// Устанавливаем нижние 4 биты поочередно в 0
+		// Устанавливаем нижние 3 бита поочередно в 0
 		PORTC &= ~(1 << col);
 		for (row = 3; row < 7; row++) {
 			if (!(PINC & (1 << row))) {
@@ -38,11 +38,10 @@ char readKeypad() {
 				
 				if (col == 1 && row == 6) return '0';
 				
-			
-				// Другая клавиша нажата, обработка здесь
 			}
 		}
-		PORTC |= 0b1111111; // Сбросим нижние 4 биты
+		PORTC |= 0b1111111; // Установим нижние 3 бита в высокий уровень и верхние 4 в режим чтения
+		
 	}
 	return 0; // Ни одна клавиша не нажата
 }
@@ -51,24 +50,30 @@ char readKeypad() {
 unsigned char SEGMENTE[] = { 0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F };
 
 unsigned char segCounter = 0;
-unsigned char keypadCounter = 3;
-unsigned int display = 154;
+unsigned int display = 0;
 
 
 void initTimer() {
 	// Настройка таймера 0 для прерываний каждые 100 миллисекунд
 	TCCR0A = 0x00;
-	TCCR0B = (1 << CS02) | (1 << CS00); // Предделитель 1024
+	TCCR0B = (1 << CS01) |(1 << CS00); // Предделитель 64
 	TIMSK0 = (1 << TOIE0); // Разрешить прерывание по переполнению таймера
 }
 
 
 ISR(TIMER0_OVF_vect) {
-	//key = readKeypad();
+	key = readKeypad();
+	
+	if (key != 0) {
+		// Обработка нажатой клавиши
+		
+		display = key - '0';
+	}
+		
+	
 	
 	PORTD = 0xFF; // Гасим все разряды
 	PORTB = (1 << segCounter); // Выбираем следующий разряд
-//	PORTC |= 1 << keypadCounter;
 	
 	switch (segCounter)
 	{
@@ -87,10 +92,8 @@ ISR(TIMER0_OVF_vect) {
 	}
 	if (segCounter++ > 2) segCounter = 0;
 	
-	//	PORTC &= ~(1 << keypadCounter);
-	//	if (keypadCounter++ > 4){ 
-			//keypadCounter = 3; 
-		//}
+
+	
 }
 
 
@@ -102,32 +105,20 @@ int main(void)
 	PORTB = 0x00;
 	DDRD = 0xFF; // Порт D - выход
 	PORTD = 0x00;
-	//DDRC = 0b0111000; //3,4,5->1
-	//PORTC =0b0111011;
 	
-
+	initKeypad();
 	
 	initTimer();
 	sei(); // Разрешить глобальные прерывания
-	initKeypad();
-	char key;
+
+
     
 		
 	while (1)
 	{
+			
 		
-	//	display++; // Увеличиваем счет от 0 до 9999
-		if (display > 9999) display = 0;
-		
-		key = readKeypad();
-		if (key != 0) {
-			// Обработка нажатой клавиши
-			display = key - '0';
-		}
-		
-	
-		
-			_delay_ms(100); // Задержка
+			
 	}
     
 	return 0;
