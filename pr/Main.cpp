@@ -5,11 +5,26 @@
 #include <util/delay.h>
 
 unsigned char key;
+unsigned int pin7=0;
 
 // Функция для инициализации порта DDRC
 void initKeypad() {
 	DDRC = 0b0000111; // Настройка нижних 4 бит порта как выходы и верхних 4 бит как входы
 	PORTC =0b1111111; // Подключение подтягивающих резисторов к верхним 4 битам
+}
+
+void initDisplay(){
+	DDRB = 0xFF; // Порт B - выход
+	PORTB = 0b10000000;
+	DDRD = 0xFF; // Порт D - выход
+	PORTD = 0x00;
+}
+
+void initTimer() {
+	// Настройка таймера 0 для прерываний каждые ___ миллисекунд
+	TCCR0A = 0x00;
+	TCCR0B = (1 << CS01) | (1 << CS00); // Предделитель 64
+	TIMSK0 = (1 << TOIE0); // Разрешить прерывание по переполнению таймера
 }
 
 // Функция для опроса клавиатуры
@@ -47,6 +62,7 @@ char readKeypad() {
 	return 0; // Ни одна клавиша не нажата
 }
 
+
 //---------------------------0-----1-----2-----3-----4-----5-----6-----7-----8------9
 unsigned char SEGMENTE[] = { 0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F };
 
@@ -64,23 +80,12 @@ segment display_2;
 segment display_3;
 segment display_4;
 
-
-void initTimer() {
-	// Настройка таймера 0 для прерываний каждые ___ миллисекунд
-	TCCR0A = 0x00;
-	TCCR0B = (1 << CS01) |(1 << CS00); // Предделитель 64
-	TIMSK0 = (1 << TOIE0); // Разрешить прерывание по переполнению таймера
-}
+bool codeRight;
 
 
-
-
-ISR(TIMER0_OVF_vect) {
-	key = readKeypad();
-	
+void outNumberOnDisplay(char key)
+{
 	if (key != 0) {
-		// Обработка нажатой клавиши
-
 		if (!display_1.saveNumber) {
 			display_1.number = (key - '0');
 			display_1.saveNumber = true;
@@ -104,26 +109,21 @@ ISR(TIMER0_OVF_vect) {
 			display_4.saveNumber = true;
 			_delay_ms(300);
 		}
-		else if (key=='#') {
+		else if (key == '#') {	
+			if (display_1.number == 1 && display_2.number == 5 && display_3.number == 4 && display_4.number == 6)
+				//codeRight = true;
+			pin7 = 1;
+			
 			display_1.number = 0; display_2.number = 0; display_3.number = 0; display_4.number = 0;
 			display_1.saveNumber = 0; display_2.saveNumber = 0; display_3.saveNumber = 0; display_4.saveNumber = 0;
-			
 			_delay_ms(300);
-			
 		}
-			
-		
-			
-		
-		
-			
-		
 	}
 		
-	
-	
 	PORTD = 0xFF; // Гасим все разряды
-	PORTB = (1 << segCounter); // Выбираем следующий разряд
+	PORTB = (1 << segCounter); // Выбираем следующий разряд. Запись (1 << segCounter) устанавливает нужный порт в 1, а все остальные в 0
+	//PORTB &= ~(1 << PB0) | ~(1 << PB1) | ~(1 << PB2) | ~(1 << PB3) | ~(1 << PB4) | ~(1 << PB5) | ~(1 << PB6) | ~(1<<PB7);
+	PORTB |=  pin7 << PB7;
 	
 	switch (segCounter)
 	{
@@ -140,10 +140,20 @@ ISR(TIMER0_OVF_vect) {
 		PORTD = ~(SEGMENTE[display_4.number % 10]);
 		break;
 	}
+	//PORTB &= ~(1 << segCounter);
 	if (segCounter++ > 2) segCounter = 0;
-	
+			
+		
+}
 
+
+
+
+ISR(TIMER0_OVF_vect) {
+	key = readKeypad();
 	
+	outNumberOnDisplay(key);
+			
 }
 
 
@@ -151,24 +161,16 @@ ISR(TIMER0_OVF_vect) {
 // Главная функция
 int main(void)
 {
-	DDRB = 0xFF; // Порт B - выход
-	PORTB = 0x00;
-	DDRD = 0xFF; // Порт D - выход
-	PORTD = 0x00;
-	
 	initKeypad();
-	
+	initDisplay();
 	initTimer();
 	sei(); // Разрешить глобальные прерывания
+	codeRight = false;
 
-
-    
-		
 	while (1)
-	{
-			
+	{		
+	
 		
-			
 	}
     
 	return 0;
