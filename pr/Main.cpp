@@ -37,6 +37,7 @@ char readKeypad() {
 				if (col == 2 && row == 5) return '9';
 				
 				if (col == 1 && row == 6) return '0';
+				if (col == 2 && row == 6) return '#';
 				
 			}
 		}
@@ -50,15 +51,28 @@ char readKeypad() {
 unsigned char SEGMENTE[] = { 0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F };
 
 unsigned char segCounter = 0;
-unsigned int display = 0;
+
+struct segment
+{
+	int number;
+	bool saveNumber = false;
+	
+};
+
+segment display_1;
+segment display_2;
+segment display_3;
+segment display_4;
 
 
 void initTimer() {
-	// Настройка таймера 0 для прерываний каждые 100 миллисекунд
+	// Настройка таймера 0 для прерываний каждые ___ миллисекунд
 	TCCR0A = 0x00;
 	TCCR0B = (1 << CS01) |(1 << CS00); // Предделитель 64
 	TIMSK0 = (1 << TOIE0); // Разрешить прерывание по переполнению таймера
 }
+
+
 
 
 ISR(TIMER0_OVF_vect) {
@@ -66,8 +80,44 @@ ISR(TIMER0_OVF_vect) {
 	
 	if (key != 0) {
 		// Обработка нажатой клавиши
+
+		if (!display_1.saveNumber) {
+			display_1.number = (key - '0');
+			display_1.saveNumber = true;
+			_delay_ms(300);
+		}
 		
-		display = key - '0';
+		else if (!display_2.saveNumber) {
+			display_2.number = (key - '0');
+			display_2.saveNumber = true;
+			_delay_ms(300);
+		}
+		
+		else if (!display_3.saveNumber) {
+			display_3.number = (key - '0');
+			display_3.saveNumber = true;
+			_delay_ms(300);
+		}
+		
+		else if (!display_4.saveNumber) {
+			display_4.number = (key - '0');
+			display_4.saveNumber = true;
+			_delay_ms(300);
+		}
+		else if (key=='#') {
+			display_1.number = 0; display_2.number = 0; display_3.number = 0; display_4.number = 0;
+			display_1.saveNumber = 0; display_2.saveNumber = 0; display_3.saveNumber = 0; display_4.saveNumber = 0;
+			
+			_delay_ms(300);
+			
+		}
+			
+		
+			
+		
+		
+			
+		
 	}
 		
 	
@@ -78,16 +128,16 @@ ISR(TIMER0_OVF_vect) {
 	switch (segCounter)
 	{
 	case 0:
-		PORTD = ~(SEGMENTE[display % 10000 / 1000]); // Раскладываем число на разряды
+		PORTD = ~(SEGMENTE[display_1.number % 10]); // Раскладываем число на разряды
 		break;
 	case 1:
-		PORTD = ~(SEGMENTE[display % 1000 / 100]);
+		PORTD = ~(SEGMENTE[display_2.number % 10]);
 		break;
 	case 2:
-		PORTD = ~(SEGMENTE[display % 100 / 10]);
+		PORTD = ~(SEGMENTE[display_3.number % 10]);
 		break;
 	case 3:
-		PORTD = ~(SEGMENTE[display % 10]);
+		PORTD = ~(SEGMENTE[display_4.number % 10]);
 		break;
 	}
 	if (segCounter++ > 2) segCounter = 0;
