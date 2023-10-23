@@ -4,14 +4,10 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
-unsigned char key;
-unsigned int pin7=0;
 
-// Функция для инициализации порта DDRC
-void initKeypad() {
-	DDRC = 0b0000111; // Настройка нижних 4 бит порта как выходы и верхних 4 бит как входы
-	PORTC =0b1111111; // Подключение подтягивающих резисторов к верхним 4 битам
-}
+unsigned int pin7=0;
+bool pushButton = false;
+
 
 void initDisplay(){
 	DDRB = 0xFF; // Порт B - выход
@@ -21,50 +17,34 @@ void initDisplay(){
 }
 
 void initTimer() {
-	// Настройка таймера 0 для прерываний каждые ___ миллисекунд
-	TCCR0A = 0x00;
-	TCCR0B = (1 << CS01) | (1 << CS00); // Предделитель 64
-	TIMSK0 = (1 << TOIE0); // Разрешить прерывание по переполнению таймера
+	// Настройка таймера 1 для прерываний каждые ___ миллисекунд
+	
+	  // инициализация Timer1
+	cli(); // отключить глобальные прерывания
+	TCCR1A = 0; // установить регистры в 0
+	TCCR1B = 0; 
+
+	OCR1A = 8000; // установка регистра совпадения
+	TCCR1B |= (1 << WGM12); // включение в CTC режим
+
+	// Установка битов CS10 на коэффициент деления: 1 - нет деления
+	TCCR1B |= (1 << CS21);
+
+	TIMSK1 |= (1 << OCIE1A); // включение прерываний по совпадению
+	sei(); // включить глобальные прерывания
 }
 
-// Функция для опроса клавиатуры
-char readKeypad() {
-	PORTC |= 0b1111111; // Установим нижние 3 бита в высокий уровень и верхние 4 в режим чтения
-	char col, row;
-	for (col = 0; col < 3; col++) {
-		// Устанавливаем нижние 3 бита поочередно в 0
-		PORTC &= ~(1 << col);
-		for (row = 3; row < 7; row++) {
-			if (!(PINC & (1 << row))) {
-				// Клавиша нажата
-				// Вернем символ в зависимости от положения клавиши
-				if (col == 0 && row == 3) return '1';
-				if (col == 1 && row == 3) return '2';
-				if (col == 2 && row == 3) return '3';
-				
-				
-				if (col == 0 && row == 4) return '4';
-				if (col == 1 && row == 4) return '5';
-				if (col == 2 && row == 4) return '6';
-				
-				if (col == 0 && row == 5) return '7';
-				if (col == 1 && row == 5) return '8';
-				if (col == 2 && row == 5) return '9';
-				
-				if (col == 1 && row == 6) return '0';
-				if (col == 2 && row == 6) return '#';
-				
-			}
-		}
-		PORTC |= 0b1111111; // Установим нижние 3 бита в высокий уровень и верхние 4 в режим чтения
-		
-	}
-	return 0; // Ни одна клавиша не нажата
+void initButton()
+{
+	DDRC = 0x00;// инициализируем порт на вход
+	PORTC = 0xFF; // включаем подтягивающие резистры (на пинах будет высокий уровень, кнопка будет притягивать к земле и таким оброзом фиксироваться нажатие)
 }
 
 
-//---------------------------0-----1-----2-----3-----4-----5-----6-----7-----8------9
-unsigned char SEGMENTE[] = { 0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F };
+
+//---------------------------0-----1-----2-----3-----4-----5-----6-----7-----8------9-----10----11----12----13---14----15
+unsigned char SEGMENTE[] = { 0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F, 0xF7, 0xFC, 0x39, 0x5E, 0x76, 0x71  };
+unsigned int display = 0;
 
 unsigned char segCounter = 0;
 
@@ -80,45 +60,10 @@ segment display_2;
 segment display_3;
 segment display_4;
 
-bool codeRight;
 
-
-void outNumberOnDisplay(char key)
+void outNumberOnDisplay(int display )
 {
-	if (key != 0) {
-		if (!display_1.saveNumber) {
-			display_1.number = (key - '0');
-			display_1.saveNumber = true;
-			_delay_ms(300);
-		}
-		
-		else if (!display_2.saveNumber) {
-			display_2.number = (key - '0');
-			display_2.saveNumber = true;
-			_delay_ms(300);
-		}
-		
-		else if (!display_3.saveNumber) {
-			display_3.number = (key - '0');
-			display_3.saveNumber = true;
-			_delay_ms(300);
-		}
-		
-		else if (!display_4.saveNumber) {
-			display_4.number = (key - '0');
-			display_4.saveNumber = true;
-			_delay_ms(300);
-		}
-		else if (key == '#') {	
-			if (display_1.number == 1 && display_2.number == 5 && display_3.number == 4 && display_4.number == 6)
-				//codeRight = true;
-			pin7 = 1;
-			
-			display_1.number = 0; display_2.number = 0; display_3.number = 0; display_4.number = 0;
-			display_1.saveNumber = 0; display_2.saveNumber = 0; display_3.saveNumber = 0; display_4.saveNumber = 0;
-			_delay_ms(300);
-		}
-	}
+	
 		
 	PORTD = 0xFF; // Гасим все разряды
 	PORTB = (1 << segCounter); // Выбираем следующий разряд. Запись (1 << segCounter) устанавливает нужный порт в 1, а все остальные в 0
@@ -128,16 +73,16 @@ void outNumberOnDisplay(char key)
 	switch (segCounter)
 	{
 	case 0:
-		PORTD = ~(SEGMENTE[display_1.number % 10]); // Раскладываем число на разряды
+		PORTD = ~(SEGMENTE[display % 16666 / 1666]); // Раскладываем число на разряды
 		break;
 	case 1:
-		PORTD = ~(SEGMENTE[display_2.number % 10]);
+		PORTD = ~(SEGMENTE[display % 1666 / 166]);
 		break;
 	case 2:
-		PORTD = ~(SEGMENTE[display_3.number % 10]);
+		PORTD = PORTD = ~(SEGMENTE[display % 166 / 16]);
 		break;
 	case 3:
-		PORTD = ~(SEGMENTE[display_4.number % 10]);
+		PORTD = ~(SEGMENTE[display % 16]);
 		break;
 	}
 	//PORTB &= ~(1 << segCounter);
@@ -149,10 +94,19 @@ void outNumberOnDisplay(char key)
 
 
 
-ISR(TIMER0_OVF_vect) {
-	key = readKeypad();
+ISR(TIMER1_COMPA_vect)
+{
+	if (pushButton) {
+		display++;
+		//if (display == 9999)
+		//	pushButton = false;
+			
+	}
+	//display = 65535;
 	
-	outNumberOnDisplay(key);
+	outNumberOnDisplay(display);
+	
+
 			
 }
 
@@ -161,20 +115,34 @@ ISR(TIMER0_OVF_vect) {
 // Главная функция
 int main(void)
 {
-	initKeypad();
 	initDisplay();
 	initTimer();
-	sei(); // Разрешить глобальные прерывания
-	codeRight = false;
-
+	
+	bool resetDisplay = false;
+	
+	
 	while (1)
 	{		
+		
+		if (!(PINC & (1 << PC1))) //если на первом пине низкий уровень (кнопка прижала контакт к земле) выаолняем условие
+		{
+			pushButton = !pushButton;
+			if (pushButton == false && resetDisplay == true) {
+				_delay_ms(5000);
+				display = 0;
+			}
+				
+			resetDisplay = true;
+			_delay_ms(300);
+			
+		}
+		
 	
 		
-	}
-    
-	return 0;
+	  
 	
+	}
+	return 0;
 }
 
 
