@@ -1,19 +1,7 @@
 # ninja log v5
 1	97	7189369523599527	CMakeFiles/BSP.dir/C_/Program_Files_(x86)/Sysprogs/VisualGDB/CMake/embedded/dummy.c.obj	bd3715f5fafc469b
-1	136	7196804620838247	CMakeFiles/pr.dir/Main.cpp.obj	e639e6fa4bbf2acd
-136	232	7196804621700124	pr	b0a9e51b93f1b798
-1	319	7190745325523748	CMakeFiles/pr.dir/LEDBlink.cpp.obj	cf2b268286ad9106
-234	272	7196804622128979	pr.bin	3bef81ee27e500ee
-232	274	0	CMakeFiles/pr.hex	7f61ec10b165db49
-4	311	7196805775591068	CMakeFiles/pr.dir/Main.cpp.obj	e639e6fa4bbf2acd
-313	474	7196805777181934	pr	b0a9e51b93f1b798
-474	510	0	CMakeFiles/pr.hex	7f61ec10b165db49
-477	513	7196805777660666	pr.bin	3bef81ee27e500ee
-1	143	7196807266791930	CMakeFiles/pr.dir/Main.cpp.obj	e639e6fa4bbf2acd
-144	5690	7196807321985939	pr	b0a9e51b93f1b798
-5692	5733	0	CMakeFiles/pr.hex	7f61ec10b165db49
-5690	5740	7196807322694056	pr.bin	3bef81ee27e500ee
 1	325	7198463265045027	CMakeFiles/pr.dir/Main.cpp.obj	e639e6fa4bbf2acd
 327	464	7198463266396957	pr	b0a9e51b93f1b798
+1	319	7190745325523748	CMakeFiles/pr.dir/LEDBlink.cpp.obj	cf2b268286ad9106
 468	522	7198463266995357	pr.bin	3bef81ee27e500ee
 464	523	0	CMakeFiles/pr.hex	7f61ec10b165db49
