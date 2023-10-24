@@ -57,7 +57,7 @@ Discarded input sections
  .text._Z9initTimerv
                 0x0000000000000000        0xe CMakeFiles/pr.dir/Main.cpp.obj
  .text._Z18outNumberOnDisplayc
-                0x0000000000000000      0x1e2 CMakeFiles/pr.dir/Main.cpp.obj
+                0x0000000000000000      0x1e0 CMakeFiles/pr.dir/Main.cpp.obj
  .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
  .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
  .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
@@ -292,7 +292,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000      0x42e
+.text           0x0000000000000000      0x42c
  *(.vectors)
  .vectors       0x0000000000000000       0x68 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
                 0x0000000000000000                __vector_default
@@ -385,27 +385,27 @@ END GROUP
                 0x00000000000000be       0xa6 CMakeFiles/pr.dir/Main.cpp.obj
                 0x00000000000000be                _Z10readKeypadv
  .text.__vector_16
-                0x0000000000000164      0x230 CMakeFiles/pr.dir/Main.cpp.obj
+                0x0000000000000164      0x22e CMakeFiles/pr.dir/Main.cpp.obj
                 0x0000000000000164                __vector_16
  .text.startup.main
-                0x0000000000000394       0x28 CMakeFiles/pr.dir/Main.cpp.obj
-                0x0000000000000394                main
+                0x0000000000000392       0x28 CMakeFiles/pr.dir/Main.cpp.obj
+                0x0000000000000392                main
  .text.startup._GLOBAL__sub_I_key
-                0x00000000000003bc       0x12 CMakeFiles/pr.dir/Main.cpp.obj
+                0x00000000000003ba       0x12 CMakeFiles/pr.dir/Main.cpp.obj
  .text.libgcc.div
-                0x00000000000003ce       0x28 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
-                0x00000000000003ce                _div
-                0x00000000000003ce                __divmodhi4
+                0x00000000000003cc       0x28 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_divmodhi4.o)
+                0x00000000000003cc                _div
+                0x00000000000003cc                __divmodhi4
  .text.libgcc.div
-                0x00000000000003f6       0x28 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_udivmodhi4.o)
-                0x00000000000003f6                __udivmodhi4
- .text.libgcc   0x000000000000041e        0xc c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_tablejump2.o)
-                0x000000000000041e                __tablejump2__
-                0x000000000000042a                . = ALIGN (0x2)
+                0x00000000000003f4       0x28 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_udivmodhi4.o)
+                0x00000000000003f4                __udivmodhi4
+ .text.libgcc   0x000000000000041c        0xc c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_tablejump2.o)
+                0x000000000000041c                __tablejump2__
+                0x0000000000000428                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000000000000042a        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
-                0x000000000000042a                _exit
-                0x000000000000042a                exit
+ .fini9         0x0000000000000428        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
+                0x0000000000000428                _exit
+                0x0000000000000428                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -424,11 +424,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000000000000042a        0x4 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000000000000428        0x4 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000000000000042e                _etext = .
+                0x000000000000042c                _etext = .
 
-.data           0x0000000000800100        0xa load address 0x000000000000042e
+.data           0x0000000000800100        0xa load address 0x000000000000042c
                 0x0000000000800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -471,8 +471,8 @@ END GROUP
                 0x000000000080011a                key
  *(COMMON)
                 0x000000000080011b                PROVIDE (__bss_end, .)
-                0x000000000000042e                __data_load_start = LOADADDR (.data)
-                0x0000000000000438                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000000000000042c                __data_load_start = LOADADDR (.data)
+                0x0000000000000436                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x000000000080011b        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
@@ -561,10 +561,10 @@ END GROUP
  .debug_abbrev  0x0000000000000000      0x5a2 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
  .debug_abbrev  0x00000000000005a2      0x270 CMakeFiles/pr.dir/Main.cpp.obj
 
-.debug_line     0x0000000000000000      0x55a
+.debug_line     0x0000000000000000      0x55c
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000       0x1a c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_line    0x000000000000001a      0x540 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_line    0x000000000000001a      0x542 CMakeFiles/pr.dir/Main.cpp.obj
 
 .debug_frame    0x0000000000000000       0xdc
  *(.debug_frame)

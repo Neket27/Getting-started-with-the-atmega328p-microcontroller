@@ -110,7 +110,7 @@ void outNumberOnDisplay(char key)
 			_delay_ms(300);
 		}
 		else if (key == '#') {	
-			if (display_1.number == 1 && display_2.number == 5 && display_3.number == 4 && display_4.number == 6)
+			if (display_1.number == 0 && display_2.number == 5 && display_3.number == 0 && display_4.number == 5)
 				//codeRight = true;
 			pin7 = 1;
 			
