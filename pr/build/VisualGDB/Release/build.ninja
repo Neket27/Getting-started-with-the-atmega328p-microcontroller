@@ -71,6 +71,12 @@ build CMakeFiles/pr.dir/Main.cpp.obj: CXX_COMPILER__pr_RELEASE ../../../Main.cpp
   OBJECT_DIR = CMakeFiles\pr.dir
   OBJECT_FILE_DIR = CMakeFiles\pr.dir
 
+build CMakeFiles/pr.dir/DHT11.cpp.obj: CXX_COMPILER__pr_RELEASE ../../../DHT11.cpp || cmake_object_order_depends_target_pr
+  DEP_FILE = CMakeFiles\pr.dir\DHT11.cpp.obj.d
+  FLAGS = -g3 -O3 -fno-exceptions -fno-rtti -mmcu=atmega328p -ffunction-sections -fdata-sections
+  OBJECT_DIR = CMakeFiles\pr.dir
+  OBJECT_FILE_DIR = CMakeFiles\pr.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target pr
@@ -79,7 +85,7 @@ build CMakeFiles/pr.dir/Main.cpp.obj: CXX_COMPILER__pr_RELEASE ../../../Main.cpp
 #############################################
 # Link the executable pr
 
-build pr: CXX_EXECUTABLE_LINKER__pr_RELEASE CMakeFiles/BSP.dir/C_/Program_Files_(x86)/Sysprogs/VisualGDB/CMake/embedded/dummy.c.obj CMakeFiles/pr.dir/Main.cpp.obj || BSP
+build pr: CXX_EXECUTABLE_LINKER__pr_RELEASE CMakeFiles/BSP.dir/C_/Program_Files_(x86)/Sysprogs/VisualGDB/CMake/embedded/dummy.c.obj CMakeFiles/pr.dir/Main.cpp.obj CMakeFiles/pr.dir/DHT11.cpp.obj || BSP
   FLAGS = -g3 -O3
   LINK_LIBRARIES = -Wl,-Map=pr.map  -mmcu=atmega328p  -Wl,-gc-sections
   OBJECT_DIR = CMakeFiles\pr.dir

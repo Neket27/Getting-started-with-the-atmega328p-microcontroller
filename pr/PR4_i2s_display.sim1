@@ -1,0 +1,53 @@
+<circuit version="1.0.0-SR1" rev="1402" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Dht22" CircId="Dht22-16" mainComp="false" Show_id="false" Show_Val="false" Pos="772,476" rotation="0" hflip="1" vflip="1" label="Dht22-16" idLabPos="-28,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" DHT22="DHT22" TempInc="0.5 °C" HumiInc="5 _%" />
+
+<item itemtype="MCU" CircId="mega8-18" mainComp="false" Show_id="true" Show_Val="false" Pos="216,576" rotation="0" hflip="1" vflip="1" label="mega8-18" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Auto_Load="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" />
+
+<item itemtype="Oscope" CircId="Oscope-21" mainComp="false" Show_id="false" Show_Val="false" Pos="924,536" rotation="0" hflip="1" vflip="1" label="Oscope-21" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _Пиксел." Basic_Y="135 _Пиксел." BufferSize="600000 Образцы" TimDiv="1000000000" TimPos="0,0,0,0," VolDiv="1,1,1,1," Tunnels=",,,," Trigger="4" Filter="0.1 V" Trigger="4" AutoSC="4" Tracks="1" HideCh="false,false,false,false," VolPos="0,0,0,0," />
+
+<item itemtype="Aip31068_i2c" CircId="Aip31068_i2c-34" mainComp="false" Show_id="true" Show_Val="false" Pos="404,376" rotation="0" hflip="1" vflip="1" label="Aip31068_i2c-34" idLabPos="70,-82" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="2 _Строк" Cols="16 _Столбцов" Control_Code="70" Frequency="250 _KHz" />
+
+<item itemtype="I2CToParallel" CircId="I2CToParallel-57" mainComp="false" Show_id="false" Show_Val="false" Pos="780,408" rotation="0" hflip="1" vflip="1" label="I2CToParallel-57" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Control_Code="70" Frequency="250 _KHz" />
+
+<item itemtype="Ground" CircId="Ground-80" mainComp="false" Show_id="false" Show_Val="false" Pos="716,452" rotation="0" hflip="1" vflip="1" label="Ground-80" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Hd44780" CircId="Hd44780-86" mainComp="false" Show_id="true" Show_Val="false" Pos="820,368" rotation="0" hflip="1" vflip="1" label="Hd44780-86" idLabPos="70,-82" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="2 _Строк" Cols="16 _Столбцов" />
+
+<item itemtype="Ground" CircId="Ground-111" mainComp="false" Show_id="false" Show_Val="false" Pos="872,412" rotation="0" hflip="1" vflip="1" label="Ground-111" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="MCU" CircId="mega328PB-114" mainComp="false" Show_id="true" Show_Val="false" Pos="484,424" rotation="0" hflip="1" vflip="1" label="mega328PB-114" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="8 MHz" Program="../../mk_work/pr/pr/build/VisualGDB/Release/pr.hex" Auto_Load="false" Rst_enabled="true" Ext_Osc="false" Wdt_enabled="false" />
+
+<item itemtype="Node" CircId="Node-103" mainComp="false" Pos="740,424" />
+
+<item itemtype="Node" CircId="Node-106" mainComp="false" Pos="740,432" />
+
+<item itemtype="Connector" uid="Connector-94" startpinid="I2CToParallel-57-out7" endpinid="Hd44780-86-dataPin7" pointList="804,440,916,440,916,376" />
+
+<item itemtype="Connector" uid="Connector-95" startpinid="I2CToParallel-57-out6" endpinid="Hd44780-86-dataPin6" pointList="804,432,908,432,908,376" />
+
+<item itemtype="Connector" uid="Connector-96" startpinid="I2CToParallel-57-out5" endpinid="Hd44780-86-dataPin5" pointList="804,424,900,424,900,376" />
+
+<item itemtype="Connector" uid="Connector-97" startpinid="I2CToParallel-57-out4" endpinid="Hd44780-86-dataPin4" pointList="804,416,892,416,892,376" />
+
+<item itemtype="Connector" uid="Connector-101" startpinid="I2CToParallel-57-in4" endpinid="Node-106-0" pointList="756,432,740,432" />
+
+<item itemtype="Connector" uid="Connector-102" startpinid="I2CToParallel-57-in3" endpinid="Node-103-1" pointList="756,424,740,424" />
+
+<item itemtype="Connector" uid="Connector-104" startpinid="Node-103-2" endpinid="I2CToParallel-57-in2" pointList="740,424,740,416,756,416" />
+
+<item itemtype="Connector" uid="Connector-105" startpinid="Ground-80-Gnd" endpinid="Node-106-1" pointList="716,436,716,428,740,428,740,432" />
+
+<item itemtype="Connector" uid="Connector-107" startpinid="Node-106-2" endpinid="Node-103-0" pointList="740,432,740,424" />
+
+<item itemtype="Connector" uid="Connector-108" startpinid="I2CToParallel-57-out0" endpinid="Hd44780-86-PinRS" pointList="804,384,804,376,836,376" />
+
+<item itemtype="Connector" uid="Connector-110" startpinid="I2CToParallel-57-out1" endpinid="Hd44780-86-PinEn" pointList="804,392,852,392,852,376" />
+
+<item itemtype="Connector" uid="Connector-112" startpinid="Ground-111-Gnd" endpinid="Hd44780-86-PinRW" pointList="872,396,844,396,844,376" />
+
+<item itemtype="Connector" uid="Connector-120" startpinid="mega328PB-114-PORTC4" endpinid="I2CToParallel-57-in0" pointList="540,416,540,392,756,392" />
+
+<item itemtype="Connector" uid="Connector-117" startpinid="mega328PB-114-PORTC5" endpinid="I2CToParallel-57-in1" pointList="532,416,532,400,756,400" />
+
+</circuit>

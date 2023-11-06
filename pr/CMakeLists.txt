@@ -11,7 +11,7 @@ find_bsp(
 
 add_bsp_based_executable(
 	NAME pr
-	SOURCES Main.cpp
+	SOURCES Main.cpp i2c.h LCD_I2C.h DHT11.cpp DHT11.h
 	GENERATE_BIN
 	GENERATE_MAP
 	GENERATE_HEX)

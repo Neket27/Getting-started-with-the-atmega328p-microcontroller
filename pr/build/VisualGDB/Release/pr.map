@@ -6,10 +6,22 @@ c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
                               CMakeFiles/pr.dir/Main.cpp.obj (__do_copy_data)
 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
                               CMakeFiles/pr.dir/Main.cpp.obj (__do_clear_bss)
-c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_ctors.o)
-                              CMakeFiles/pr.dir/Main.cpp.obj (__do_global_ctors)
-c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_tablejump2.o)
-                              c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_ctors.o) (__tablejump2__)
+c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
+                              CMakeFiles/pr.dir/Main.cpp.obj (sprintf)
+c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+                              c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(sprintf.o) (vfprintf)
+c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+                              c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o) (strnlen_P)
+c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(strnlen.o)
+                              c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o) (strnlen)
+c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(fputc.o)
+                              c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o) (fputc)
+c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+                              c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o) (__ultoa_invert)
+c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_prologue.o)
+                              c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(sprintf.o) (__prologue_saves__)
+c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_epilogue.o)
+                              c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(sprintf.o) (__epilogue_restores__)
 
 Discarded input sections
 
@@ -43,19 +55,74 @@ Discarded input sections
  .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/Main.cpp.obj
  .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/Main.cpp.obj
  .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/Main.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/Main.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/Main.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/Main.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/Main.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/Main.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/Main.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/Main.cpp.obj
  .text          0x0000000000000000        0x0 CMakeFiles/pr.dir/Main.cpp.obj
  .data          0x0000000000000000        0x0 CMakeFiles/pr.dir/Main.cpp.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/pr.dir/Main.cpp.obj
- .text._Z11initDisplayv
-                0x0000000000000000        0xe CMakeFiles/pr.dir/Main.cpp.obj
- .text._Z11initTimer_0v
-                0x0000000000000000        0xe CMakeFiles/pr.dir/Main.cpp.obj
- .text._Z11initTimer_1v
+ .text._Z8i2c_initv
+                0x0000000000000000       0x12 CMakeFiles/pr.dir/Main.cpp.obj
+ .text._Z9i2c_startv
+                0x0000000000000000       0x10 CMakeFiles/pr.dir/Main.cpp.obj
+ .text._Z9i2c_writec
+                0x0000000000000000       0x14 CMakeFiles/pr.dir/Main.cpp.obj
+ .text._Z8i2c_readv
+                0x0000000000000000       0x14 CMakeFiles/pr.dir/Main.cpp.obj
+ .text._Z6togglev
                 0x0000000000000000       0x32 CMakeFiles/pr.dir/Main.cpp.obj
- .text._Z10initButtonv
-                0x0000000000000000        0x8 CMakeFiles/pr.dir/Main.cpp.obj
- .text._Z18outNumberOnDisplayl
-                0x0000000000000000      0x14c CMakeFiles/pr.dir/Main.cpp.obj
+ .text._Z10lcd_cmd_hfc
+                0x0000000000000000       0x7c CMakeFiles/pr.dir/Main.cpp.obj
+ .text._Z5delayi
+                0x0000000000000000        0x2 CMakeFiles/pr.dir/Main.cpp.obj
+ .text._Z7lcd_msgPc
+                0x0000000000000000       0x1e CMakeFiles/pr.dir/Main.cpp.obj
+ .text._Z10lcd_rig_shv
+                0x0000000000000000        0x6 CMakeFiles/pr.dir/Main.cpp.obj
+ .text._Z10lcd_lef_shv
+                0x0000000000000000        0x6 CMakeFiles/pr.dir/Main.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .text._Z9dht_startv
+                0x0000000000000000       0x38 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .text._Z8dht_bytev
+                0x0000000000000000       0x36 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .bss._temp     0x0000000000000000        0x1 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .bss._hum      0x0000000000000000        0x1 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .debug_macro   0x0000000000000000      0xbe0 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .debug_macro   0x0000000000000000       0x10 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .debug_macro   0x0000000000000000       0x1c CMakeFiles/pr.dir/DHT11.cpp.obj
+ .debug_macro   0x0000000000000000      0x1c9 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .debug_macro   0x0000000000000000      0x2fc CMakeFiles/pr.dir/DHT11.cpp.obj
+ .debug_macro   0x0000000000000000       0x9e CMakeFiles/pr.dir/DHT11.cpp.obj
+ .debug_macro   0x0000000000000000     0x1411 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .debug_macro   0x0000000000000000      0x13a CMakeFiles/pr.dir/DHT11.cpp.obj
+ .debug_macro   0x0000000000000000       0xbd CMakeFiles/pr.dir/DHT11.cpp.obj
+ .debug_macro   0x0000000000000000       0x34 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .debug_macro   0x0000000000000000       0x18 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .debug_macro   0x0000000000000000       0x6c CMakeFiles/pr.dir/DHT11.cpp.obj
+ .debug_macro   0x0000000000000000       0x10 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .debug_macro   0x0000000000000000       0x28 CMakeFiles/pr.dir/DHT11.cpp.obj
  .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
  .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
  .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
@@ -104,37 +171,52 @@ Discarded input sections
                 0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
                 0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
- .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_ctors.o)
- .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_ctors.o)
- .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_ctors.o)
+ .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
+ .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
+ .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
+ .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+ .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+ .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+ .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+ .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+ .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+ .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(strnlen.o)
+ .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(strnlen.o)
+ .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(strnlen.o)
+ .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(fputc.o)
+ .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(fputc.o)
+ .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(fputc.o)
+ .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+ .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+ .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+ .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_prologue.o)
+ .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_prologue.o)
+ .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_prologue.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_ctors.o)
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_prologue.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_ctors.o)
- .text.libgcc   0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_ctors.o)
- .text.libgcc.prologue
-                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_ctors.o)
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_prologue.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_prologue.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_ctors.o)
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_prologue.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_ctors.o)
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_prologue.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_ctors.o)
- .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_tablejump2.o)
- .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_tablejump2.o)
- .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_tablejump2.o)
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_prologue.o)
+ .text          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_epilogue.o)
+ .data          0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_epilogue.o)
+ .bss           0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_epilogue.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_tablejump2.o)
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_epilogue.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_tablejump2.o)
- .text.libgcc.prologue
-                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_tablejump2.o)
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_epilogue.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_epilogue.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_tablejump2.o)
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_epilogue.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_tablejump2.o)
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_epilogue.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_tablejump2.o)
+                0x0000000000000000        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_epilogue.o)
 
 Memory Configuration
 
@@ -154,6 +236,7 @@ Address of section .data set to 0x800100
 LOAD c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
 LOAD CMakeFiles/BSP.dir/C_/Program_Files_(x86)/Sysprogs/VisualGDB/CMake/embedded/dummy.c.obj
 LOAD CMakeFiles/pr.dir/Main.cpp.obj
+LOAD CMakeFiles/pr.dir/DHT11.cpp.obj
 LOAD c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a
 LOAD c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libm.a
 START GROUP
@@ -262,7 +345,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000      0x356
+.text           0x0000000000000000      0xc10
  *(.vectors)
  .vectors       0x0000000000000000       0x68 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
                 0x0000000000000000                __vector_default
@@ -285,89 +368,114 @@ END GROUP
  *(.lowtext*)
                 0x0000000000000068                __ctors_start = .
  *(.ctors)
- .ctors         0x0000000000000068        0x2 CMakeFiles/pr.dir/Main.cpp.obj
-                0x000000000000006a                __ctors_end = .
-                0x000000000000006a                __dtors_start = .
+                0x0000000000000068                __ctors_end = .
+                0x0000000000000068                __dtors_start = .
  *(.dtors)
-                0x000000000000006a                __dtors_end = .
+                0x0000000000000068                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x000000000000006a        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
-                0x000000000000006a                __init
+ .init0         0x0000000000000068        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
+                0x0000000000000068                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x000000000000006a        0xc c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
+ .init2         0x0000000000000068        0xc c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x0000000000000076       0x16 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
-                0x0000000000000076                __do_copy_data
- .init4         0x000000000000008c       0x10 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
-                0x000000000000008c                __do_clear_bss
+ .init4         0x0000000000000074       0x16 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_copy_data.o)
+                0x0000000000000074                __do_copy_data
+ .init4         0x000000000000008a       0x10 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_clear_bss.o)
+                0x000000000000008a                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
  *(.init6)
- .init6         0x000000000000009c       0x16 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_ctors.o)
-                0x000000000000009c                __do_global_ctors
  *(.init6)
  *(.init7)
  *(.init7)
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000000000000b2        0x8 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
+ .init9         0x000000000000009a        0x8 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
  *(.init9)
  *(.text)
- .text          0x00000000000000ba        0x4 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
-                0x00000000000000ba                __vector_22
-                0x00000000000000ba                __vector_1
-                0x00000000000000ba                __vector_24
-                0x00000000000000ba                __vector_12
-                0x00000000000000ba                __bad_interrupt
-                0x00000000000000ba                __vector_6
-                0x00000000000000ba                __vector_3
-                0x00000000000000ba                __vector_23
-                0x00000000000000ba                __vector_25
-                0x00000000000000ba                __vector_13
-                0x00000000000000ba                __vector_17
-                0x00000000000000ba                __vector_19
-                0x00000000000000ba                __vector_7
-                0x00000000000000ba                __vector_5
-                0x00000000000000ba                __vector_4
-                0x00000000000000ba                __vector_9
-                0x00000000000000ba                __vector_2
-                0x00000000000000ba                __vector_21
-                0x00000000000000ba                __vector_15
-                0x00000000000000ba                __vector_8
-                0x00000000000000ba                __vector_14
-                0x00000000000000ba                __vector_10
-                0x00000000000000ba                __vector_18
-                0x00000000000000ba                __vector_20
-                0x00000000000000be                . = ALIGN (0x2)
+ .text          0x00000000000000a2        0x4 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
+                0x00000000000000a2                __vector_22
+                0x00000000000000a2                __vector_1
+                0x00000000000000a2                __vector_24
+                0x00000000000000a2                __vector_12
+                0x00000000000000a2                __bad_interrupt
+                0x00000000000000a2                __vector_6
+                0x00000000000000a2                __vector_3
+                0x00000000000000a2                __vector_23
+                0x00000000000000a2                __vector_25
+                0x00000000000000a2                __vector_11
+                0x00000000000000a2                __vector_13
+                0x00000000000000a2                __vector_17
+                0x00000000000000a2                __vector_19
+                0x00000000000000a2                __vector_7
+                0x00000000000000a2                __vector_5
+                0x00000000000000a2                __vector_4
+                0x00000000000000a2                __vector_9
+                0x00000000000000a2                __vector_2
+                0x00000000000000a2                __vector_21
+                0x00000000000000a2                __vector_15
+                0x00000000000000a2                __vector_8
+                0x00000000000000a2                __vector_14
+                0x00000000000000a2                __vector_10
+                0x00000000000000a2                __vector_16
+                0x00000000000000a2                __vector_18
+                0x00000000000000a2                __vector_20
+                0x00000000000000a6                . = ALIGN (0x2)
  *(.text.*)
- .text.__vector_16
-                0x00000000000000be      0x170 CMakeFiles/pr.dir/Main.cpp.obj
-                0x00000000000000be                __vector_16
- .text.__vector_11
-                0x000000000000022e       0x66 CMakeFiles/pr.dir/Main.cpp.obj
-                0x000000000000022e                __vector_11
+ .text._Z7lcd_cmdc
+                0x00000000000000a6       0xe6 CMakeFiles/pr.dir/Main.cpp.obj
+                0x00000000000000a6                _Z7lcd_cmdc
+ .text._Z7lcd_dwrc
+                0x000000000000018c       0xe6 CMakeFiles/pr.dir/Main.cpp.obj
+                0x000000000000018c                _Z7lcd_dwrc
+ .text._Z8lcd_initv
+                0x0000000000000272      0x186 CMakeFiles/pr.dir/Main.cpp.obj
+                0x0000000000000272                _Z8lcd_initv
  .text.startup.main
-                0x0000000000000294       0xa0 CMakeFiles/pr.dir/Main.cpp.obj
-                0x0000000000000294                main
- .text.startup._GLOBAL__sub_I_pin7
-                0x0000000000000334       0x12 CMakeFiles/pr.dir/Main.cpp.obj
- .text.libgcc   0x0000000000000346        0xc c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_tablejump2.o)
-                0x0000000000000346                __tablejump2__
-                0x0000000000000352                . = ALIGN (0x2)
+                0x00000000000003f8      0x18e CMakeFiles/pr.dir/Main.cpp.obj
+                0x00000000000003f8                main
+ .text._Z8dht_readPhS_
+                0x0000000000000586       0xd6 CMakeFiles/pr.dir/DHT11.cpp.obj
+                0x0000000000000586                _Z8dht_readPhS_
+ .text.avr-libc
+                0x000000000000065c       0x46 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
+                0x000000000000065c                sprintf
+ .text.avr-libc
+                0x00000000000006a2      0x3b4 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+                0x00000000000006a2                vfprintf
+ .text.avr-libc
+                0x0000000000000a56       0x16 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(strnlen_P.o)
+                0x0000000000000a56                strnlen_P
+ .text.avr-libc
+                0x0000000000000a6c       0x16 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(strnlen.o)
+                0x0000000000000a6c                strnlen
+ .text.avr-libc
+                0x0000000000000a82       0x60 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(fputc.o)
+                0x0000000000000a82                fputc
+ .text.avr-libc
+                0x0000000000000ae2       0xbc c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(ultoa_invert.o)
+                0x0000000000000ae2                __ultoa_invert
+ .text.libgcc.prologue
+                0x0000000000000b9e       0x38 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_prologue.o)
+                0x0000000000000b9e                __prologue_saves__
+ .text.libgcc.prologue
+                0x0000000000000bd6       0x36 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_epilogue.o)
+                0x0000000000000bd6                __epilogue_restores__
+                0x0000000000000c0c                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000000352        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
-                0x0000000000000352                _exit
-                0x0000000000000352                exit
+ .fini9         0x0000000000000c0c        0x0 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
+                0x0000000000000c0c                _exit
+                0x0000000000000c0c                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -386,55 +494,38 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000000352        0x4 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000000000000c0c        0x4 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000000000000356                _etext = .
+                0x0000000000000c10                _etext = .
 
-.data           0x0000000000800100       0x10 load address 0x0000000000000356
+.data           0x0000000000800100       0x12 load address 0x0000000000000c10
                 0x0000000000800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
- .data.SEGMENTE
-                0x0000000000800100       0x10 CMakeFiles/pr.dir/Main.cpp.obj
-                0x0000000000800100                SEGMENTE
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
+ .rodata.main.str1.1
+                0x0000000000800100       0x12 CMakeFiles/pr.dir/Main.cpp.obj
  *(.gnu.linkonce.r*)
-                0x0000000000800110                . = ALIGN (0x2)
-                0x0000000000800110                _edata = .
-                0x0000000000800110                PROVIDE (__data_end, .)
+                0x0000000000800112                . = ALIGN (0x2)
+                0x0000000000800112                _edata = .
+                0x0000000000800112                PROVIDE (__data_end, .)
 
-.bss            0x0000000000800110       0x14
-                0x0000000000800110                PROVIDE (__bss_start, .)
+.bss            0x0000000000800112       0x12
+                0x0000000000800112                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.display_4
-                0x0000000000800110        0x3 CMakeFiles/pr.dir/Main.cpp.obj
-                0x0000000000800110                display_4
- .bss.display_3
-                0x0000000000800113        0x3 CMakeFiles/pr.dir/Main.cpp.obj
-                0x0000000000800113                display_3
- .bss.display_2
-                0x0000000000800116        0x3 CMakeFiles/pr.dir/Main.cpp.obj
-                0x0000000000800116                display_2
- .bss.display_1
-                0x0000000000800119        0x3 CMakeFiles/pr.dir/Main.cpp.obj
-                0x0000000000800119                display_1
- .bss.segCounter
-                0x000000000080011c        0x1 CMakeFiles/pr.dir/Main.cpp.obj
-                0x000000000080011c                segCounter
- .bss.display   0x000000000080011d        0x4 CMakeFiles/pr.dir/Main.cpp.obj
-                0x000000000080011d                display
- .bss.pushButton
-                0x0000000000800121        0x1 CMakeFiles/pr.dir/Main.cpp.obj
-                0x0000000000800121                pushButton
- .bss.pin7      0x0000000000800122        0x2 CMakeFiles/pr.dir/Main.cpp.obj
-                0x0000000000800122                pin7
+ .bss.temp      0x0000000000800112        0x1 CMakeFiles/pr.dir/Main.cpp.obj
+                0x0000000000800112                temp
+ .bss.hum       0x0000000000800113        0x1 CMakeFiles/pr.dir/Main.cpp.obj
+                0x0000000000800113                hum
+ .bss.buf       0x0000000000800114       0x10 CMakeFiles/pr.dir/Main.cpp.obj
+                0x0000000000800114                buf
  *(COMMON)
                 0x0000000000800124                PROVIDE (__bss_end, .)
-                0x0000000000000356                __data_load_start = LOADADDR (.data)
-                0x0000000000000366                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000000000000c10                __data_load_start = LOADADDR (.data)
+                0x0000000000000c22                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0000000000800124        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
@@ -480,10 +571,15 @@ END GROUP
 .stab.indexstr
  *(.stab.indexstr)
 
-.comment        0x0000000000000000       0x30
+.comment        0x0000000000000000       0x5c
  *(.comment)
  .comment       0x0000000000000000       0x30 CMakeFiles/pr.dir/Main.cpp.obj
                                          0x31 (size before relaxing)
+ .comment       0x0000000000000030       0x31 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .comment       0x0000000000000030       0x31 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(sprintf.o)
+ .comment       0x0000000000000030       0x2c c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(vfprintf_std.o)
+                                         0x2d (size before relaxing)
+ .comment       0x000000000000005c       0x31 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5\libc.a(fputc.o)
 
 .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x40
@@ -505,42 +601,51 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000       0x60
+.debug_aranges  0x0000000000000000       0xb8
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000       0x60 CMakeFiles/pr.dir/Main.cpp.obj
+                0x0000000000000000       0x88 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_aranges
+                0x0000000000000088       0x30 CMakeFiles/pr.dir/DHT11.cpp.obj
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000      0xa73
+.debug_info     0x0000000000000000     0x102c
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x5f4 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_info    0x00000000000005f4      0x47f CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_info    0x00000000000005f4      0x625 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_info    0x0000000000000c19      0x413 CMakeFiles/pr.dir/DHT11.cpp.obj
 
-.debug_abbrev   0x0000000000000000      0x814
+.debug_abbrev   0x0000000000000000      0x9de
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x5a2 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_abbrev  0x00000000000005a2      0x272 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_abbrev  0x00000000000005a2      0x266 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_abbrev  0x0000000000000808      0x1d6 CMakeFiles/pr.dir/DHT11.cpp.obj
 
-.debug_line     0x0000000000000000      0x430
+.debug_line     0x0000000000000000      0xa70
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000       0x1a c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_line    0x000000000000001a      0x416 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_line    0x000000000000001a      0x776 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_line    0x0000000000000790      0x2e0 CMakeFiles/pr.dir/DHT11.cpp.obj
 
-.debug_frame    0x0000000000000000      0x100
+.debug_frame    0x0000000000000000      0x184
  *(.debug_frame)
- .debug_frame   0x0000000000000000      0x100 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_frame   0x0000000000000000      0x11c CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_frame   0x000000000000011c       0x68 CMakeFiles/pr.dir/DHT11.cpp.obj
 
-.debug_str      0x0000000000000000     0x796b
+.debug_str      0x0000000000000000     0x7da0
  *(.debug_str)
  .debug_str     0x0000000000000000      0x208 c:/sysgcc/avr/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr5/crtatmega328p.o
- .debug_str     0x0000000000000208     0x7763 CMakeFiles/pr.dir/Main.cpp.obj
-                                       0x7813 (size before relaxing)
+ .debug_str     0x0000000000000208     0x7ac3 CMakeFiles/pr.dir/Main.cpp.obj
+                                       0x7bd0 (size before relaxing)
+ .debug_str     0x0000000000007ccb       0xd5 CMakeFiles/pr.dir/DHT11.cpp.obj
+                                       0x7394 (size before relaxing)
 
-.debug_loc      0x0000000000000000      0x314
+.debug_loc      0x0000000000000000      0x507
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0x314 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_loc     0x0000000000000000      0x1bd CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_loc     0x00000000000001bd      0x34a CMakeFiles/pr.dir/DHT11.cpp.obj
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -560,27 +665,37 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000       0x70
+.debug_ranges   0x0000000000000000      0x110
  *(.debug_ranges)
- .debug_ranges  0x0000000000000000       0x70 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_ranges  0x0000000000000000       0x90 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_ranges  0x0000000000000090       0x80 CMakeFiles/pr.dir/DHT11.cpp.obj
 
-.debug_macro    0x0000000000000000     0x2ac5
+.debug_macro    0x0000000000000000     0x2f23
  *(.debug_macro)
- .debug_macro   0x0000000000000000       0xb7 CMakeFiles/pr.dir/Main.cpp.obj
- .debug_macro   0x00000000000000b7      0xbe0 CMakeFiles/pr.dir/Main.cpp.obj
- .debug_macro   0x0000000000000c97       0x10 CMakeFiles/pr.dir/Main.cpp.obj
- .debug_macro   0x0000000000000ca7       0x1c CMakeFiles/pr.dir/Main.cpp.obj
- .debug_macro   0x0000000000000cc3      0x1c9 CMakeFiles/pr.dir/Main.cpp.obj
- .debug_macro   0x0000000000000e8c      0x2fc CMakeFiles/pr.dir/Main.cpp.obj
- .debug_macro   0x0000000000001188       0x9e CMakeFiles/pr.dir/Main.cpp.obj
- .debug_macro   0x0000000000001226     0x1411 CMakeFiles/pr.dir/Main.cpp.obj
- .debug_macro   0x0000000000002637      0x13a CMakeFiles/pr.dir/Main.cpp.obj
- .debug_macro   0x0000000000002771       0xbd CMakeFiles/pr.dir/Main.cpp.obj
- .debug_macro   0x000000000000282e       0x34 CMakeFiles/pr.dir/Main.cpp.obj
- .debug_macro   0x0000000000002862       0x18 CMakeFiles/pr.dir/Main.cpp.obj
- .debug_macro   0x000000000000287a       0x6c CMakeFiles/pr.dir/Main.cpp.obj
- .debug_macro   0x00000000000028e6       0x69 CMakeFiles/pr.dir/Main.cpp.obj
- .debug_macro   0x000000000000294f       0x10 CMakeFiles/pr.dir/Main.cpp.obj
- .debug_macro   0x000000000000295f      0x166 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000000000      0x102 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000000102      0xbe0 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000000ce2       0x10 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000000cf2       0x1c CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000000d0e      0x1c9 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000000ed7      0x2fc CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x00000000000011d3       0x9e CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000001271     0x1411 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000002682      0x13a CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x00000000000027bc       0xbd CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000002879       0x34 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x00000000000028ad       0x18 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x00000000000028c5       0x6c CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000002931       0x58 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000002989       0x10 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000002999       0x97 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000002a30       0xf2 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000002b22       0x16 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000002b38       0x20 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000002b58       0x16 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000002b6e       0x10 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000002b7e      0x160 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000002cde       0x28 CMakeFiles/pr.dir/Main.cpp.obj
+ .debug_macro   0x0000000000002d06       0xb7 CMakeFiles/pr.dir/DHT11.cpp.obj
+ .debug_macro   0x0000000000002dbd      0x166 CMakeFiles/pr.dir/DHT11.cpp.obj
 OUTPUT(pr elf32-avr)
 LOAD linker stubs
